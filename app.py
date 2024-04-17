@@ -24,7 +24,7 @@ def main():
     hair_texture = st.selectbox("Hair Texture", ["Straight", "Wavy", "Curly", "Kinky/coiled"])
 
     if st.button("Generate Composite"):
-        text = f"generate a one human face that has {{'Ethnicity/Race': '{ethnicity_race}', 'Age': {age}, 'Gender': '{gender}', 'Facial Hair': '{facial_hair}', 'Skin Tone': '{skin_tone}', 'Scars/Marks': '{scars_marks}', 'Hair Texture': '{hair_texture}'}}"
+        text = f"generate a real human face that has {{'Ethnicity/Race': '{ethnicity_race}', 'Age': {age}, 'Gender': '{gender}', 'Facial Hair': '{facial_hair}', 'Skin Tone': '{skin_tone}', 'Scars/Marks': '{scars_marks}', 'Hair Texture': '{hair_texture}'}} like a passport size photo"
         image_bytes = query({"inputs": text})
         print(text)
         # Display the image
