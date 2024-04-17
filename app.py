@@ -13,7 +13,7 @@ def query(payload):
     return response.content
 
 def main():
-    st.title("Facial Composite Model Development")
+    st.title("Face Composite System")
 
     ethnicity_race = st.selectbox("Ethnicity/Race", ["Caucasian", "African", "Asian", "Hispanic/Latino", "Middle Eastern", "Indigenous/Aboriginal", "Mixed race"])
     age = st.select_slider("Age", options=[10,20,30,40,50,60])
@@ -24,7 +24,7 @@ def main():
     hair_texture = st.selectbox("Hair Texture", ["Straight", "Wavy", "Curly", "Kinky/coiled"])
 
     if st.button("Generate Composite"):
-        text = f"generate a real human face that has {{'Ethnicity/Race': '{ethnicity_race}', 'Age': {age}, 'Gender': '{gender}', 'Facial Hair': '{facial_hair}', 'Skin Tone': '{skin_tone}', 'Scars/Marks': '{scars_marks}', 'Hair Texture': '{hair_texture}'}} like a passport size photo"
+        text = f"generate one real human face that has {{'Ethnicity/Race': '{ethnicity_race}', 'Age': {age}, 'Gender': '{gender}', 'Facial Hair': '{facial_hair}', 'Skin Tone': '{skin_tone}', 'Scars/Marks': '{scars_marks}', 'Hair Texture': '{hair_texture}'}} like a passport size photo "
         image_bytes = query({"inputs": text})
         print(text)
         # Display the image
