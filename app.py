@@ -16,7 +16,7 @@ def main():
     st.title("Face Composite System")
 
     ethnicity_race = st.selectbox("Ethnicity/Race", ["Caucasian", "African", "Asian", "Hispanic/Latino", "Middle Eastern", "Indigenous/Aboriginal", "Mixed race"])
-    age = st.select_slider("Age", options=[10,20,30,40,50,60])
+    age = st.select_slider("Age", options=[8,16,24,32,40,48,56,64])
     gender = st.selectbox("Gender", ["Male", "Female", "Non-binary/genderqueer"])
     facial_hair = st.selectbox("Facial Hair", ["Beard", "Mustache", "Sideburns", "Clean-shaven"])
     skin_tone = st.selectbox("Skin Tone", ["Fair", "Olive", "Tan", "Dark"])
