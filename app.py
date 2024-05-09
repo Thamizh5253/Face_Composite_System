@@ -24,12 +24,12 @@ def main():
     hair_texture = st.selectbox("Hair Texture", ["Straight", "Wavy", "Curly", "Kinky/coiled"])
 
     if st.button("Generate Composite"):
-        for _ in range(3):
-            text = f"generate a real human face with {{'Ethnicity/Race': '{ethnicity_race}', 'Age': {age}, 'Gender': '{gender}', 'Facial Hair': '{facial_hair}', 'Skin Tone': '{skin_tone}', 'Scars/Marks': '{scars_marks}', 'Hair Texture': '{hair_texture}'}}  "
-            image_bytes = query({"inputs": text})
-            # Display the image
-            image = Image.open(io.BytesIO(image_bytes))
-            st.image(image, caption=f'Generated Composite {_+1}', use_column_width=True)
+        text = f"generate a real human face with {{'Ethnicity/Race': '{ethnicity_race}', 'Age': {age}, 'Gender': '{gender}', 'Facial Hair': '{facial_hair}', 'Skin Tone': '{skin_tone}', 'Scars/Marks': '{scars_marks}', 'Hair Texture': '{hair_texture}'}}  "
+        image_bytes = query({"inputs": text})
+        print(text)
+        # Display the image
+        image = Image.open(io.BytesIO(image_bytes))
+        st.image(image, caption='Generated Composite', use_column_width=True)
 
 if __name__ == "__main__":
     main()
