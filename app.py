@@ -36,7 +36,7 @@ def main():
         image_bytes = query({"inputs": text})
         # Display the image
         image = Image.open(io.BytesIO(image_bytes))
-        st.image(image, caption='Generated Composite', use_column_width=True)
+        st.image(image, caption='Generated Composite', use_container_width=True)
 
 if __name__ == "__main__":
     main()
